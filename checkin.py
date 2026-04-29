@@ -19,6 +19,7 @@ from utils.notify import notify
 
 load_dotenv()
 
+print(f"DEBUG_INFO: {os.getenv('ANYROUTER_ACCOUNTS')}")
 BALANCE_HASH_FILE = 'balance_hash.txt'
 
 
