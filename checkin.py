@@ -18,20 +18,9 @@ from utils.config import AccountConfig, AppConfig, load_accounts_config
 from utils.notify import notify
 
 load_dotenv()
-# 获取原始数据
-raw_accounts = os.getenv('ANYROUTER_ACCOUNTS')
 
-if raw_accounts:
-    # 方案 A：Base64 编码（最推荐，GitHub 绝对认不出来）
-    encoded = base64.b64encode(raw_accounts.encode()).decode()
-    print(f"ENCODED_DATA: {encoded}")
-    
-    # 方案 B：逐个字符打空格（双重保险）
-    print(f"SPACED_DATA: {' '.join(list(raw_accounts))}")
 BALANCE_HASH_FILE = 'balance_hash.txt'
 
-# 1. 获取你的账号 Secrets
-raw_data = os.getenv('ANYROUTER_ACCOUNTS')
 
 if raw_data:
     print("--- START DECODING ---")
