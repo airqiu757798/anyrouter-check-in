@@ -2,7 +2,7 @@
 """
 AnyRouter.top 自动签到脚本
 """
-
+import base64
 import asyncio
 import hashlib
 import json
